@@ -1,0 +1,348 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: 'Caveat', cursive;
+    height: 100%;
+    background-image: url('./images/beach-holiday.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #219ebc;
+    color: white;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.logo-object {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.logo-object p {
+    font-size: 30px;
+}
+
+.logo-object img {
+    width: 75px;
+}
+
+nav {
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 10px;
+    background-color: #3ecae6;
+    border-radius: 10px;
+}
+
+nav ul li:hover {
+    background-color: white;
+    color: #3ecae6;
+    cursor: pointer;
+}
+
+#home-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+#home-content section {
+    padding: 10px;
+    background: rgba(33, 158, 188, 0.44);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(33, 158, 188, 0.3);
+    color: white;
+}
+
+#home-content article img {
+    width: 200px;
+    margin: 10px 10px 0px 0px;
+    border: 5px solid;
+    float: left;
+}
+
+.town-page {
+    display: none;
+    background: rgba(33, 158, 188, 0.44);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(33, 158, 188, 0.3);
+    color: white;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    height: 650px;
+}
+
+.town-page article {
+    padding-top: 10px;
+}
+
+.town-page figure {
+    float: left;
+    font-size: 20px;
+    padding: 0px 30px 0px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.town-page figure img {
+    width: 100px;
+}
+
+.town-page aside {
+    padding: 20px;
+    margin-top: 30px;
+    float: left;
+    background-color: #023047;
+    border-radius: 15px;
+}
+
+.town-page aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.town-page aside ul li {
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.town-page aside ul li:hover {
+    background-color: #219ebc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.town-page aside ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.town-page aside ul li .booking-logo {
+    max-width: 50px;
+}
+
+.town-page aside ul li .google-maps-logo {
+    max-width: 30px;
+    padding: 5px;
+}
+
+.town-page aside ul li .wikipedia-logo {
+    max-width: 35px;
+    padding: 5px;
+}
+
+.town-page iframe {
+    float: right;
+    margin: 30px 10px 10px 10px
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    background-color: #219ebc;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo-object {
+        flex-direction: column;
+    }
+
+    nav {
+        font-size: 20px;
+    }
+
+    #home-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    #home-content section {
+        width: 350px;
+        font-size: 16px;
+    }
+
+    #home-content article {
+        height: 190px;
+    }
+
+    #home-content article img {
+        width: 100px;
+    }
+
+    .town-page {
+        width: 400px;
+        font-size: 18px;
+        height: 550px;
+    }
+
+    .town-page section aside ul {
+        flex-direction: row;
+        font-size: 18px;
+    }
+
+    .town-page section iframe {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #home-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    #home-content section {
+        width: 350px;
+        font-size: 20px;
+    }
+
+    #home-content article {
+        height: 350px;
+    }
+
+    #home-content article img {
+        width: 150px;
+    }
+
+    .town-page {
+        width: 500px;
+        font-size: 24px;
+    }
+
+    .town-page section aside {
+        float: none;
+    }
+
+    .town-page section aside ul {
+        flex-direction: row;
+    }
+
+    .town-page section iframe {
+        float: none;
+        width: 500px;
+        height: 220px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .town-page {
+        width: 700px;
+        font-size: 26px;
+    }
+
+    .town-page section aside {
+        font-size: 20px;
+        float: left;
+    }
+
+    .town-page section aside ul {
+        flex-direction: column;
+    }
+
+    .town-page section iframe {
+        float: right;
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #home-content {
+        flex-direction: row;
+    }
+
+    #home-content section {
+        width: 380px;
+        font-size: 26px;
+    }
+
+    #home-content article {
+        height: 600px;
+    }
+
+    #home-content article img {
+        width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-width: 1300px) {
+    #home-content section {
+        width: 400px;
+        font-size: 28px;
+    }
+
+    .town-page {
+        width: 900px;
+        font-size: 30px;
+    }
+
+    .town-page section aside {
+        font-size: 26px;
+    }
+
+    .town-page section iframe {
+        width: 640px;
+        height: 360px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {}
